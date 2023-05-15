@@ -1,10 +1,10 @@
-/*************
-* Autor: Galicia Cordova Elietzer Jared
-* Creado: 14/05/2023
-* Modificado: 14/05/2023
-* Descripciòn: Implementacion de la clase Ave
-*   heredando de Animal
-*/
+/** ***********
+ * Autor: Galicia Cordova Elietzer Jared
+ * Creado: 14/05/2023
+ * Modificado: 14/05/2023
+ * Descripciòn: Implementacion de la clase Ave
+ *   heredando de Animal
+ */
 package sistemasolar;
 
 /**
@@ -12,11 +12,12 @@ package sistemasolar;
  * @author elietzer
  */
 public class Planeta {
-    
+
     public static int GASEOSO = 1;
     public static int ENANO = 1;
     public static int TERRESTRE = 1;
-    
+    public static int UA = 149;
+
     private String nombre = null;
     private int numSatelites = 0;
     private double masa = 0;
@@ -29,6 +30,21 @@ public class Planeta {
     }
 
     
+    
+    // Calcula la dencidad del sol
+    public double getDensidad() {
+        return getMasa() / getVolumen();
+    }
+
+    // Verifica la posiccion del planeta
+    public boolean isExterior() {
+        
+        if (disSol > (3.4 * UA)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public String getNombre() {
         return nombre;
@@ -88,12 +104,10 @@ public class Planeta {
 
     @Override
     public String toString() {
-        return "Planeta{" + "nombre=" + nombre + ", numSatelites=" + 
-                numSatelites + ", masa=" + masa + ", volumen=" + volumen + 
-                ", diametro=" + diametro + ", disSol=" + disSol + ", tipo=" +
-                tipo + '}';
+        return "Planeta{" + "nombre=" + nombre + ", numSatelites="
+                + numSatelites + ", masa=" + masa + ", volumen=" + volumen
+                + ", diametro=" + diametro + ", disSol=" + disSol + ", tipo="
+                + tipo + '}';
     }
-    
-    
-    
+
 }
