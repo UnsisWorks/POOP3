@@ -1,3 +1,10 @@
+/*************
+* Autor: Galicia Cordova Elietzer Jared
+* Creado: 14/05/2023
+* Modificado: 14/05/2023
+* Descripciòn: Implementacion de la clase Ave
+*   heredando de Animal
+*/
 package ejercicioanimales;
 
 /**
@@ -23,6 +30,9 @@ public abstract class Animal {
         this.numPta = numPta;
         this.habit = habit;
         this.peso = peso;
+    }
+
+    public Animal() {
     }
     
     // Methos generals for animals
@@ -68,7 +78,11 @@ public abstract class Animal {
     public void setEspecie(String especie) {
         this.especie = especie;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Animal{" + "nombre=" + nombre + ", numPta=" + numPta + 
+                ", habit=" + habit + ", especie=" + especie + ", peso=" + peso + '}';
+    }
     
 }

@@ -1,3 +1,10 @@
+/*************
+* Autor: Galicia Cordova Elietzer Jared
+* Creado: 14/05/2023
+* Modificado: 14/05/2023
+* Descripciòn: Implementacion de la clase Ave
+*   heredando de Animal
+*/
 package ejercicioanimales;
 
 /**
@@ -10,7 +17,10 @@ public class Gato extends Animal {
     
     public Gato(String nombre, int numPta, String habit, double peso) {
         super(nombre, numPta, habit, peso);
+        this.setEspecie("Gato");
     }
+
+    public Gato() {this.setEspecie("Gato");}
 
     @Override
     public void comer(String comida) {
@@ -34,5 +44,7 @@ public class Gato extends Animal {
     public void dormir() {
         System.out.println("Zzz Zzz Zzz");
     }
+
+    
     
 }

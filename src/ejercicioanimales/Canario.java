@@ -1,3 +1,10 @@
+/*************
+* Autor: Galicia Cordova Elietzer Jared
+* Creado: 14/05/2023
+* Modificado: 14/05/2023
+* Descripciòn: Implementacion de la clase Ave
+*   heredando de Animal
+*/
 package ejercicioanimales;
 
 /**
@@ -6,6 +13,8 @@ package ejercicioanimales;
  */
 public class Canario extends Animal {
 
+    
+    public static String comidaCanario = "Semillas";
     /**
      * @param nombre
      * @param numPta
@@ -14,11 +23,21 @@ public class Canario extends Animal {
      */
     public Canario(String nombre, int numPta, String habit, double peso) {
         super(nombre, numPta, habit, peso);
+        this.setEspecie("Canario");
     }
+
+    public Canario() { this.setEspecie("Canario");}
+    
+    
 
     @Override
     public void comer(String comida) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    
+        if (comida.equalsIgnoreCase(Canario.comidaCanario)) {
+            System.out.println("Gracias");
+        } else {
+            System.out.println("Solo como semillas de girasol");
+        }
     }
 
     @Override

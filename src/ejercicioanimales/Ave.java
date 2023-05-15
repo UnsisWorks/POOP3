@@ -24,6 +24,9 @@ public class Ave extends Animal {
         super(nombre, numPta, habit, peso);
     }
 
+    public Ave() {
+    }
+
     @Override
     public void comer(String comida) {
         
