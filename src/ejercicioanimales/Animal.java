@@ -32,8 +32,7 @@ public abstract class Animal {
         this.peso = peso;
     }
 
-    public Animal() {
-    }
+    public Animal() {}
     
     // Methos generals for animals
     public abstract void comer(String comida);
