@@ -11,6 +11,32 @@ package ejercicioanimales;
  *
  * @author elietzer
  */
-public class Ave {
+public class Ave extends Animal {
+
+    public static String comidaAve = "alpiste";
+    /**
+     * @param nombre
+     * @param numPta
+     * @param habit
+     * @param peso 
+     */
+    public Ave(String nombre, int numPta, String habit, double peso) {
+        super(nombre, numPta, habit, peso);
+    }
+
+    @Override
+    public void comer(String comida) {
+        
+        if (comida.equalsIgnoreCase(Ave.comidaAve)) {
+            System.out.println("Gracias");
+        } else {
+            System.out.println("Solo como alpiste");
+        }
+    }
+
+    @Override
+    public void emitirSonido() {
+        System.out.println("RUU RUU");
+    }
     
 }

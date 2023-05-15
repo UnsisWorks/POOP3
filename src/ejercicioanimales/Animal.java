@@ -9,6 +9,7 @@ public abstract class Animal {
     private String nombre;
     private int numPta;
     private String habit;
+    private String especie;
     private double peso;
 
     /**
@@ -25,7 +26,7 @@ public abstract class Animal {
     }
     
     // Methos generals for animals
-    public abstract void comer();
+    public abstract void comer(String comida);
     public abstract void emitirSonido();
 
     public String getNombre() {
@@ -58,6 +59,14 @@ public abstract class Animal {
 
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
     }
     
     
